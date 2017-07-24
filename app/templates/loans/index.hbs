@@ -1,19 +1,22 @@
-<h2>Loans Index</h2>
-<table class="table">
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th>Borrowed since</th>
-      <th>Notes</th>
-      <th>Returned?</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each model as |loan|}}
-      {{loans/loan-row
-        loan=loan
-        save=(action save)
-      }}
-    {{/each}}
-  </tbody>
-</table>
+<div class="card mt-3">
+  <div class="card-block">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Borrowed since</th>
+          <th>Notes</th>
+          <th>Returned?</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each model as |loan|}}
+          {{loans/loan-row
+            loan=loan
+            save=(action save)
+          }}
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
