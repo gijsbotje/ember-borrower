@@ -6,8 +6,8 @@ export default Ember.Controller.extend({
     save(model) {
       this.transitionToRoute('friends.show', model);
     },
-    cancel(model) {
-      this.transitionToRoute('friends.show', model);
+    cancel(friend) {
+      this.transitionToRoute('loans.index', friend);
     }
   }
 

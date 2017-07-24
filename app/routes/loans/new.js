@@ -5,5 +5,20 @@ export default Ember.Route.extend({
     return this.store.createRecord('loan', {
       friend: this.modelFor('friends/show')
     })
+  },
+
+  resetController: function ( controller, isExisting) {
+
+    if (isExisting) {
+
+      let model = controller.get('model');
+
+      if (model.get('isNew')) {
+        model.destroyRecord();
+      }
+
+    }
+
   }
+
 })

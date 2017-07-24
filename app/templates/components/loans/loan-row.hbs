@@ -1,16 +1,10 @@
 {{yield}}
 <td>{{loan.article.name}}</td>
 <td>{{loan.notes}}</td>
-<td>{{loan.createdAt}}</td>
+<td>{{format-date loan.createdAt "LL"}}</td>
 <td>
-  {{input type="checkbox" checked=loan.returned}}
-</td>
-<td>
+  {{input type="checkbox" checked=loan.returned click=(action save loan)}}
   {{#if loan.isSaving}}
-    <p>Saving...</p>
-  {{else if loan.hasDirtAttributes}}
-    <button {{action save loan}}>
-      Save
-    </button>
+    {{fa-icon "refresh" spin=true class="text-info"}}
   {{/if}}
 </td>
