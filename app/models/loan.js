@@ -6,6 +6,6 @@ export default Model.extend({
   notes: attr('string', {defaultValue: ''}),
   returned: attr('boolean'),
   createdAt: attr('date'),
-  friends: belongsTo('friends'),
+  friend: belongsTo('friend'),
   article: belongsTo('article')
 });
