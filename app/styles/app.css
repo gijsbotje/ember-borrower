@@ -5,6 +5,8 @@ Error: File to import not found or unreadable: ember-bootstrap/bootstrap.
 1: @import "ember-bootstrap/bootstrap";
 2: 
 3: @import "theme/base";
+4: 
+5: @import "ember-power-select";
 
 Backtrace:
 app.scss:1
@@ -52,4 +54,4 @@ app.scss:1
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: ember-bootstrap/bootstrap.\A         on line 1 of app.scss\A \A 1: @import \"ember-bootstrap/bootstrap\";\A 2: \A 3: @import \"theme/base\";"; }
+  content: "Error: File to import not found or unreadable: ember-bootstrap/bootstrap.\A         on line 1 of app.scss\A \A 1: @import \"ember-bootstrap/bootstrap\";\A 2: \A 3: @import \"theme/base\";\A 4: \A 5: @import \"ember-power-select\";"; }

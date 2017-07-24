@@ -1,0 +1,21 @@
+<div class="row justify-content-between mb-2">
+  <div class="col">
+    {{link-to "<go back" "articles.index"}}
+  </div>
+  <div class="col text-right">
+    {{link-to "Edit info" "articles.edit" model class="btn btn-outline-info btn-sm"}}
+    <a href="#" {{action "delete" model}} class="btn btn-link text-danger btn-sm">
+      Delete friend
+    </a>
+  </div>
+</div>
+<div class="row">
+  <div class="col col-sm-3">
+    <img src="//www.fillmurray.com/201/201" alt="" class="img-thumbnail">
+  </div>
+  <div class="col col-sm-9">
+    <h2 class="display-4">
+      {{model.name}}
+    </h2>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<h1>Friends Index</h1>
+
+<h2>Total Friends: {{model.length}}</h2>
+
+<table class="table table-striped">
+  <thead>
+    <tr class="bg-primary text-white">
+      <th>
+        Name
+      </th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |friend|}}
+      <tr>
+        <td>
+          {{link-to friend.fullName "loans" friend}}
+        </td>
+        <td class="text-right">
+          <a href="#" {{action "delete" friend}} class="btn btn-outline-danger btn-sm">
+            Delete
+          </a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+

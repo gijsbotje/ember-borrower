@@ -1,0 +1,34 @@
+<form {{action "save" on="submit"}} class="form">
+  {{#if errorMessage}}
+    <div class="alert alert-danger">
+      {{errorMessage}}
+    </div>
+  {{/if}}
+  <div class="form-group">
+    <label for="article-select">
+      Select an article
+    </label>
+    {{#power-select class="form-control"
+      selected=model.article
+      options=articles
+      onchange=(action (mut model.article)) as |article| }}
+      {{article.name}}
+    {{/power-select}}
+  </div>
+  <div class="form-group">
+    <label for="notes">
+      Notes
+    </label>
+    {{textarea value=model.notes placeholder="notes" class="form-control" cols="50" row="10"}}
+  </div>
+  <div class="row">
+    <div class="col">
+      <button {{action "cancel"}} class="btn btn-outline-danger btn-block">
+        Cancel
+      </button>
+    </div>
+    <div class="col">
+      <input type="submit" value="Save" class="btn btn-success btn-block">
+    </div>
+  </div>
+</form>

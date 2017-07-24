@@ -1,0 +1,36 @@
+<div class="row justify-content-between mb-2">
+  <div class="col">
+    {{link-to "<go back" "friends.index"}}
+  </div>
+  <div class="col text-right">
+    {{link-to "Lend article" "loans.new" class="btn btn-success btn-sm"}}
+    {{link-to "Edit info" "friends.edit" model class="btn btn-outline-info btn-sm"}}
+    <a href="#" {{action "delete" model}} class="btn btn-link text-danger btn-sm">
+      Delete friend
+    </a>
+  </div>
+</div>
+<div class="row">
+  <div class="col col-sm-3">
+    <img src="//www.fillmurray.com/200/200" alt="">
+  </div>
+  <div class="col col-sm-9">
+    <h2 class="display-4">
+      {{model.fullName}}
+    </h2>
+    <ul class="list-unstyled">
+      <li class="py-1">
+        {{fa-icon "envelope-o"}} {{model.email}}
+      </li>
+      <li class="py-1">
+        {{fa-icon "twitter"}} {{model.twitter}}
+      </li>
+
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    {{outlet}}
+  </div>
+</div>

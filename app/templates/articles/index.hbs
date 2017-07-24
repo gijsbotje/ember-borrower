@@ -1,0 +1,24 @@
+<table class="table table-striped">
+  <thead>
+    <tr class="bg-primary text-white">
+      <th>
+        Name
+      </th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{# each model as |article|}}
+      <tr>
+        <td>
+          {{link-to article.name "articles.show" article}}
+        </td>
+        <td class="text-right">
+          <a href="#" {{action "delete" article}} class="btn btn-outline-danger btn-sm">
+            Delete
+          </a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

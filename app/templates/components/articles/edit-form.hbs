@@ -1,0 +1,24 @@
+<form {{action "save" on="submit"}} class="form">
+  {{#if errorMessage}}
+    <div class="alert alert-danger">
+      {{errorMessage}}
+    </div>
+  {{/if}}
+  <div class="form-group">
+    <label for="article-name">
+      Article name
+    </label>
+    {{input value=model.name placeholder="Article name" class="form-control"}}
+  </div>
+  <div class="row">
+    <div class="col">
+      {{#bs-button onClick=(action "cancel") block=true type="outline-danger"}}
+        cancel
+      {{/bs-button}}
+    </div>
+    <div class="col">
+      <input type="submit" value="Save" class="btn btn-success btn-block">
+
+    </div>
+  </div>
+</form>
